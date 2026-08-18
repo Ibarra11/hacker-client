@@ -20,7 +20,7 @@ const ThemeImage = (props: Props) => {
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
+    <div className="flex min-h-screen flex-col items-center justify-center">
       <main className={styles.main}>
         <ThemeImage
           className={styles.logo}
