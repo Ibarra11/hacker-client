@@ -1,13 +1,13 @@
 "use client";
+import { cn } from "@repo/ui/lib/cn";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import AskIcon from "../assets/icons/ask.svg";
 import EyeIcon from "../assets/icons/eye.svg";
 import HomeIcon from "../assets/icons/home.svg";
 import JobsIcon from "../assets/icons/jobs.svg";
-import { usePathname } from "next/navigation";
-import { cn } from "../../../../packages/ui/src/lib/cn";
 
 const links = [
   {
