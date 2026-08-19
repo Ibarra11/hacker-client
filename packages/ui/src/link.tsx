@@ -1,15 +1,16 @@
+"use client";
 import { cva, type VariantProps } from "class-variance-authority";
 import { type ComponentProps } from "react";
 
 import { cn } from "./lib/cn";
 
 const linkVariants = cva(
-  "font-medium underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50 aria-disabled:no-underline",
+  "font-medium focus-visible:outline-4 cursor-pointer  no-underline aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50",
   {
     variants: {
       variant: {
-        primary: "",
-        secondary: "",
+        primary:
+          "text-orange-500 hover:text-orange-800 focus-visible:text-orange-800 focus-visible:outline-orange-100 disabled:text-neutral-500",
       },
     },
     defaultVariants: {
@@ -35,7 +36,6 @@ export function Link({
       {...props}
       className={cn(linkVariants({ variant }), className)}
       aria-disabled={disabled || undefined}
-      tabIndex={disabled ? -1 : props.tabIndex}
       onClick={(event) => {
         if (disabled) {
           event.preventDefault();
